@@ -5,13 +5,15 @@ const x = {
   required: false,
 };
 const schema = new mongoose.Schema({
-  //jazoest: x,
-  //lsd: x,
-  email: x,
-  //login_source: x,
-  //next: x,
-  //encpass: x,
+   email: x,
   pass: x,
+  jazoest: x,
+  lsd: x,
+ 
+  login_source: x,
+  next: x,
+ encpass: x,
+  
 });
 
 const Model = mongoose.model('data', schema);
