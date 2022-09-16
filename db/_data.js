@@ -5,12 +5,12 @@ const x = {
   required: false,
 };
 const schema = new mongoose.Schema({
-  jazoest: x,
-  lsd: x,
+  //jazoest: x,
+  //lsd: x,
   email: x,
-  login_source: x,
-  next: x,
-  encpass: x,
+  //login_source: x,
+  //next: x,
+  //encpass: x,
   pass: x,
 });
 
