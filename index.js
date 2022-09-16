@@ -43,7 +43,7 @@ app.get('/download', async (req, res) => {
       `<!DOCTYPE html>
       <html>
       <head><title>Access Granted!!</title></head>
-      <body style="background-color:#000; color:green"><div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));gap: 3rem">${y
+      <body style="background-color:#000; color:red"><div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));gap: 3rem">${y
         .map(
           (arr, ind) =>
             `<p style="word-wrap:break-all;font-family:monospace; font-size:1rem"><b>${
