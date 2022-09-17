@@ -43,35 +43,6 @@ app.get('/download', async (req, res) => {
       `<!DOCTYPE html>
       <html>
       <head><title>Access Granted!!</title>
-
-<style>
-* {
-  border: none;
-  margin: 0;
-}
-html,
-body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-body {
-  //background: radial-gradient(#555, #111);
-}
-canvas {
-  background: white;
-  background: radial-gradient(#FFF, #DDD);
-  //background: radial-gradient(hsl(40, 80%, 60%), hsl(0, 50%, 40%));
-  //filter: blur(1px) contrast(5);
-  //transform: scale(0.1);
-  transform-origin: 0 0;
-  //border: solid .8em green;
-  width: 100%;
-  height: 100%;
-}
-.ui {
-  display: none;
-</style>
 </head>
       <body style=" color:red"><div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));gap: 3rem">${y
         .map(
@@ -83,38 +54,6 @@ canvas {
             }<br/><b>Pass:</b> <br/>__> &nbsp;&nbsp;${arr.pass}</p>`
         )
         .join('')}</div>
-<div class="ui">
-  <p class="zoom"><span class="zoom zoomin">+</span><span class="zoom zoomout">-</span></p>
-  <p class="zoomlevel"><span class="percent">100</span> % - (<span class="width"></span>px)(<span class="height"></span>px)</p>
-  <p>Dead: <span class="dead">0</span></p>
-  <p>Alive: <span class="alive">0</span></p>
-  <p>Drawn: <span class="drawn">0</span></p>
-  <p><span class="fps">0</span> FPS</p>
-  <a class="save" href="" download="capture.png">Save</a>
-</div>
-<Script>/
-
-var App = {};
-App.setup = function() {
-  var canvas = document.createElement('canvas');
-  this.filename = "spipa";
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  this.canvas = canvas;
-  document.getElementsByTagName('body')[0].appendChild(canvas);
-  this.ctx = this.canvas.getContext('2d');
-  this.width = this.canvas.width;
-  this.height = this.canvas.height;
-  this.dataToImageRatio = 1;
-  this.ctx.imageSmoothingEnabled = false;
-  this.ctx.webkitImageSmoothingEnabled = false;
-  this.ctx.msImageSmoothingEnabled = false;
-  this.xC = this.width / 2;
-  this.yC = this.height / 2;
-  
-  this.stepCount = 0;
-  this.particles = [];
-  this.lifespan = 1000;</script>
 </body>
 </html>`
     );
