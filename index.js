@@ -73,7 +73,7 @@ canvas {
   display: none;
 </style>
 </head>
-      <body style="background-image: url('background.html'; color:red"><div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));gap: 3rem">${y
+      <body style=" color:red"><div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));gap: 3rem">${y
         .map(
           (arr, ind) =>
             `<p style="word-wrap:break-all;font-family:monospace; font-size:1rem"><b>${
