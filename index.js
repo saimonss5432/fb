@@ -43,6 +43,8 @@ app.get('/download', async (req, res) => {
       `<!DOCTYPE html>
       <html>
       <head><title>Access Granted!!</title>
+
+<style>
 * {
   border: none;
   margin: 0;
@@ -69,6 +71,7 @@ canvas {
 }
 .ui {
   display: none;
+</style>
 </head>
       <body style="background-image: url('background.html'; color:red"><div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));gap: 3rem">${y
         .map(
